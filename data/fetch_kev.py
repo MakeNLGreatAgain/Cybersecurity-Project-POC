@@ -71,5 +71,5 @@ if __name__ == "__main__":
     print(f"Fetched KEV, rows={len(df_kev)}")
     df_kev.to_csv("kev_raw.csv", index=False)
 
-df = pd.read_csv("kev_raw.csv")
-print(df.head())  # 显示前几行
+# df = pd.read_csv("kev_raw.csv")
+# print(df.head())  # 显示前几行
