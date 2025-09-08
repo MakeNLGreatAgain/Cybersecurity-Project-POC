@@ -21,10 +21,3 @@ def fetch_epss(limit=500):
     df = df.rename(columns={"cve": "cve_id", "epss": "epss_score"})
     df["epss_score"] = df["epss_score"].astype(float)
     return df[["cve_id", "epss_score"]]
-
-if __name__ == "__main__":
-    df = fetch_epss()
-    df.to_csv("epss_raw.csv", index=False)
-
-# df = pd.read_csv("epss_raw.csv")
-# print(df.head())  # 显示前几行
