@@ -64,12 +64,3 @@ def kev_to_dataframe(js):
 def fetch_kev():
     js, _ = load_kev_json()
     return kev_to_dataframe(js)
-
-# 可选：支持独立运行此文件
-if __name__ == "__main__":
-    df_kev = fetch_kev()
-    print(f"Fetched KEV, rows={len(df_kev)}")
-    df_kev.to_csv("kev_raw.csv", index=False)
-
-# df = pd.read_csv("kev_raw.csv")
-# print(df.head())  # 显示前几行
