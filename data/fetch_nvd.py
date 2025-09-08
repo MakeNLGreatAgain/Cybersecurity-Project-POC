@@ -42,10 +42,3 @@ def fetch_nvd(days=90, start=0, results_per_page=2000):
     df["cvss_score"] = pd.to_numeric(df["cvss_score"], errors="coerce")
     df["published_date"] = pd.to_datetime(df["published_date"], errors="coerce")
     return df.dropna(subset=["cvss_score", "published_date"])
-
-if __name__ == "__main__":
-    df = fetch_nvd()
-    df.to_csv("nvd_raw.csv", index=False)
-
-# df = pd.read_csv("nvd_raw.csv")
-# print(df.head())  # 显示前几行
