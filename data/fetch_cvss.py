@@ -47,5 +47,5 @@ if __name__ == "__main__":
     df = fetch_nvd()
     df.to_csv("nvd_raw.csv", index=False)
 
-df = pd.read_csv("nvd_raw.csv")
-print(df.head())  # 显示前几行
+# df = pd.read_csv("nvd_raw.csv")
+# print(df.head())  # 显示前几行
