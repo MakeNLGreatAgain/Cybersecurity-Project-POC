@@ -11,7 +11,7 @@ import pandas as pd
 import requests
 from datetime import date, timedelta
 
-def fetch_nvd(days=90, start=0, results_per_page=2000):
+def fetch_nvd(days=360, start=0, results_per_page=2000):
     # NVD API: https://nvd.nist.gov/developers/vulnerabilities
     pub_end = date.today()
     pub_start = pub_end - timedelta(days=days)
